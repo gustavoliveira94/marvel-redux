@@ -11,8 +11,9 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.props.api)
-    const { api } = this.props
+    const { api, error } = this.props
+    console.log(api)
+    console.log(error)
     return (
       <div className="App">
         <img className="logo" width="280px" src="https://cdn-store.iseeme.com/skin/frontend/polar/default/images/marvel/category-pages/Marvel-logo.png" alt="Marvel" />
@@ -28,7 +29,8 @@ class App extends Component {
 
 function mapStateToProps({ requestApiReducer }) {
   return {
-    api: requestApiReducer.items
+    api: requestApiReducer.items,
+    error: requestApiReducer.error
   }
 }
 

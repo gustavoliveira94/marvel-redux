@@ -23,7 +23,7 @@ export const requestAPIFailure = error => ({
 export function requestAPI() {
     return dispatch => {
         dispatch(requestAPIBegin())
-        return fetch('https://gateway.marvel.com:443/v1/public/characters?apikey=46ddcc696410797f092cd0b95e6dfc7c')
+        return fetch('https://gatewy.marvel.com:443/v1/public/characters?apikey=46ddcc696410797f092cd0b95e6dfc7c')
             .then(res => res.json())
             .then(json => {
                 dispatch(requestAPISuccess(json.data.results))
