@@ -12,12 +12,13 @@ class App extends Component {
 
   render() {
     console.log(this.props.api)
+    const { api } = this.props
     return (
       <div className="App">
         <img className="logo" width="280px" src="https://cdn-store.iseeme.com/skin/frontend/polar/default/images/marvel/category-pages/Marvel-logo.png" alt="Marvel" />
         <div className="container">
           <Character
-            detail={this.props.api}
+            detail={api}
           />
         </div>
       </div>
